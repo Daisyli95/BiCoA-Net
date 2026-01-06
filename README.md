@@ -22,7 +22,6 @@ Official implementation of BiCoA-Net, a deep learning framework for predicting p
 - [Input Data Format](#-input-data-format)
 - [Model Weights](#-model-weights)
 - [License](#-license)
-- [Contact](#-contact)
 
 ---
 
@@ -205,7 +204,6 @@ python inference.py --checkpoint your_custom_model.pt --input data.csv
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
 
 <div align="center">
 
