@@ -4,7 +4,7 @@ BiCoA-Net Inference Script
 Predicts protein-ligand binding kinetics (pKoff) from protein sequences and ligand SMILES.
 
 Usage:
-    python inference.py --checkpoint model.pt --input data.xlsx --output predictions.csv
+    python inference.py --checkpoint model.pt --input data.csv
 """
 
 import os
@@ -21,13 +21,13 @@ def parse_args():
         epilog="""
 Examples:
     # Basic usage
-    python inference.py --checkpoint model.pt --input data.xlsx
+    python inference.py --checkpoint model.pt --input data.csv
     
     # Specify output location and use CPU
-    python inference.py --checkpoint model.pt --input data.xlsx --output results.csv --device cpu
+    python inference.py --checkpoint model.pt --input data.csv --output-dir results --device cpu
     
     # Process multiple files
-    python inference.py --checkpoint model.pt --input file1.xlsx file2.xlsx file3.xlsx
+    python inference.py --checkpoint model.pt --input file1.csv file2.csv file3.csv
         """
     )
     
@@ -43,7 +43,7 @@ Examples:
         type=str,
         nargs='+',
         required=True,
-        help='Input data file(s) containing FASTA sequences and SMILES strings. Supported formats: .xlsx, .csv'
+        help='Input CSV file(s) containing FASTA sequences and SMILES strings'
     )
     
     parser.add_argument(
@@ -81,14 +81,23 @@ def validate_inputs(args):
     
     # Check input files
     missing_files = []
+    wrong_format = []
     for file in args.input:
         if not os.path.exists(file):
             missing_files.append(file)
+        elif not file.lower().endswith('.csv'):
+            wrong_format.append(file)
     
     if missing_files:
         errors.append("The following input files were not found:")
         for file in missing_files:
             errors.append(f"  - {file}")
+    
+    if wrong_format:
+        errors.append("The following files are not CSV format:")
+        for file in wrong_format:
+            errors.append(f"  - {file}")
+        errors.append("Please use CSV files (.csv extension)")
     
     # Check device availability
     if args.device == 'cuda':
@@ -168,11 +177,10 @@ def main():
         print("\n✅ SUCCESS! All predictions completed")
         print("="*80)
         print(f"\nResults saved to: {args.output_dir}/")
-        print("\nOutput files:")
+        print("\nOutput files (CSV format):")
         for file in args.input:
             base_name = Path(file).stem
             print(f"  • predictions_{base_name}.csv")
-            print(f"  • predictions_{base_name}.xlsx")
         print()
         
     except Exception as e:
