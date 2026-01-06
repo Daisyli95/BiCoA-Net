@@ -1,0 +1,42 @@
+{
+  "total_samples": 5446,
+  "split_ratio": "70:10:20 (train:val:test)",
+  "description": "Random splits with different seeds for each run",
+  "runs": [
+    {
+      "run": 1,
+      "seed": 42,
+      "train_size": 3812,
+      "val_size": 544,
+      "test_size": 1090
+    },
+    {
+      "run": 2,
+      "seed": 142,
+      "train_size": 3812,
+      "val_size": 544,
+      "test_size": 1090
+    },
+    {
+      "run": 3,
+      "seed": 242,
+      "train_size": 3812,
+      "val_size": 544,
+      "test_size": 1090
+    },
+    {
+      "run": 4,
+      "seed": 342,
+      "train_size": 3812,
+      "val_size": 544,
+      "test_size": 1090
+    },
+    {
+      "run": 5,
+      "seed": 442,
+      "train_size": 3812,
+      "val_size": 544,
+      "test_size": 1090
+    }
+  ]
+}
