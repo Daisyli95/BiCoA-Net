@@ -213,12 +213,6 @@ MKTAYIAKQRQISFVK...,CC(C)Cc1ccc(cc1)C(C)C(=O)O
 MASGADSKGD...,COc1ccc2c(c1)ncc(n2)CN
 ```
 
-**Example 2: With metadata**
-```csv
-protein_name,ligand_name,FASTA,smiles,experimental_pKoff
-EGFR,Ibuprofen,MKTAYIAKQRQISFVK...,CC(C)Cc1ccc(cc1)C(C)C(=O)O,6.2
-HSP90,Compound_123,MASGADSKGD...,COc1ccc2c(c1)ncc(n2)CN,7.1
-```
 
 ---
 
@@ -237,66 +231,12 @@ MKTAYIAKQRQISFVK...,CC(C)Cc1ccc(cc1)C(C)C(=O)O,6.45
 **predictions_{filename}.xlsx**
 - Same data in Excel format with formatting
 
-### Analysis Files (when running `analyze.py`)
-
-#### 📊 Visualizations
-- `performance_dashboard.png`
-  - 8-panel comprehensive analysis
-  - Concordance Index as primary metric
-  - Ranking performance and enrichment
-  - Scatter plots and distributions
-
-- `target_comparison.png`
-  - Per-target performance breakdown
-  - CI and correlation metrics
-  - Sample distributions
-
-#### 📋 Reports
-- `comprehensive_report.txt`
-  - Detailed metrics with drug discovery context
-  - Clinical recommendations
-  - Statistical analysis
-
-#### 📁 Data Files
-- `clean_predictions.csv/xlsx`: Cleaned prediction data
-- `outliers.csv/xlsx`: Detected outliers (if any)
-
----
-
-## 🎯 Drug Discovery Metrics
-
-The analysis tool provides key metrics for drug discovery:
-
-### Concordance Index (CI)
-**Primary metric for compound ranking**
-- CI ≥ 0.7: Excellent (suitable for lead optimization)
-- CI ≥ 0.6: Good (useful for compound screening)
-- CI < 0.6: Poor ranking ability
-
-### Top-K Accuracy
-Measures ability to identify top-performing compounds:
-- Top-1, Top-5, Top-10 accuracy
-- Critical for hit identification
-
-### Enrichment Factor
-Quantifies screening efficiency:
-- Higher values indicate better compound prioritization
-- Important for high-throughput screening campaigns
-
-### Correlation Metrics
-- **Pearson r**: Linear relationship strength
-- **Spearman ρ**: Monotonic relationship strength
-- **R² Score**: Variance explained by predictions
-
----
 
 ## 💾 Model Weights
 
 Pre-trained models are available via Hugging Face:
 
-| Model | Dataset | Performance | Download |
-|-------|---------|-------------|----------|
-| BiCoA-Net v1.0 | KinetX | CI: 0.78, R²: 0.72 | [Download](link) |
+
 
 ### Using Custom Models
 
@@ -329,42 +269,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Please feel free to:
-- Report bugs via [Issues](https://github.com/Daisyli95/BiCoA-Net/issues)
-- Submit feature requests
-- Create pull requests
-
----
-
-## 📞 Contact
-
-For questions, suggestions, or collaborations:
-
-- **GitHub Issues:** [Create an issue](https://github.com/Daisyli95/BiCoA-Net/issues)
-- **Email:** [your-email@example.com]
-
----
-
-## 🙏 Acknowledgments
-
-We thank the contributors to the following projects:
-- PyTorch team for the deep learning framework
-- RDKit for cheminformatics tools
-- The scientific community for valuable feedback
-
----
-
-## 📝 Changelog
-
-### Version 1.0.0 (Current)
-- Initial release
-- Core prediction functionality
-- Comprehensive analysis tools
-- Publication-quality visualizations
-
----
 
 <div align="center">
 
