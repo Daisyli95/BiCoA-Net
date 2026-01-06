@@ -117,14 +117,14 @@ That's it! Your predictions will be saved in the `./predictions` directory.
 
 #### Basic Usage
 ```bash
-python inference.py --checkpoint model.pt --input data.xlsx
+python inference.py --checkpoint model.pt --input data.csv
 ```
 
 #### Advanced Options
 ```bash
 python inference.py \
     --checkpoint model.pt \
-    --input file1.xlsx file2.csv \
+    --input file1.csv \
     --output-dir ./my_predictions \
     --device cuda \
     --batch-size 64
@@ -135,7 +135,7 @@ python inference.py \
 | Argument | Description | Default | Required |
 |----------|-------------|---------|----------|
 | `--checkpoint` | Path to model checkpoint (.pt file) | - | ✅ |
-| `--input` | Input data file(s) (.csv or .xlsx) | - | ✅ |
+| `--input` | Input data file(s) (.csv) | - | ✅ |
 | `--output-dir` | Directory for saving results | `./predictions` | ❌ |
 | `--device` | Computation device (`cuda` or `cpu`) | `cuda` | ❌ |
 | `--batch-size` | Batch size for inference | `32` | ❌ |
@@ -144,7 +144,7 @@ python inference.py \
 ```bash
 python inference.py \
     --checkpoint model.pt \
-    --input dataset1.xlsx dataset2.xlsx dataset3.csv \
+    --input dataset.csv \
     --output-dir ./batch_predictions
 ```
 
@@ -170,7 +170,6 @@ You can include additional columns for reference:
 
 ### Supported File Formats
 - **CSV** (`.csv`): Comma-separated values
-- **Excel** (`.xlsx`): Microsoft Excel format
 
 ### Example Input Files
 
