@@ -244,23 +244,6 @@ Train your own model and use it for inference:
 ```bash
 python inference.py --checkpoint your_custom_model.pt --input data.csv
 ```
-
----
-
-## 📚 Citation
-
-If you use BiCoA-Net in your research, please cite:
-
-```bibtex
-@article{bicoanet2024,
-  title={BiCoA-Net: An Interpretable Bidirectional Co-Attention Framework for Predicting Protein-Ligand Binding Kinetics},
-  author={[Authors]},
-  journal={[Journal]},
-  year={2024},
-  note={Under Review}
-}
-```
-
 ---
 
 ## 📄 License
