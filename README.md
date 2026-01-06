@@ -87,7 +87,7 @@ python -c "import torch; print(f'PyTorch version: {torch.__version__}'); print(f
 
 ### 1. Download Model Weights
 Download the pre-trained model checkpoint:
-- [model.pt](link-to-huggingface) (recommended)
+- [model.pt]([link-to-huggingface](https://huggingface.co/Daisyli95/BiCoA-Net/blob/main/model.pt)) (recommended)
 
 Place the checkpoint in your working directory.
 
