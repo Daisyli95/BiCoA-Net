@@ -19,11 +19,8 @@ Official implementation of BiCoA-Net, a deep learning framework for predicting p
 - [Quick Start](#-quick-start)
 - [Usage](#-usage)
   - [Running Predictions](#running-predictions)
-  - [Analyzing Results](#analyzing-results)
 - [Input Data Format](#-input-data-format)
-- [Output Files](#-output-files)
 - [Model Weights](#-model-weights)
-- [Citation](#-citation)
 - [License](#-license)
 - [Contact](#-contact)
 
@@ -154,34 +151,6 @@ python inference.py \
 
 ---
 
-### Analyzing Results
-
-After generating predictions, analyze them with drug discovery metrics:
-
-```bash
-python analyze.py --predictions-dir ./predictions
-```
-
-#### Analysis Options
-```bash
-python analyze.py \
-    --predictions-dir ./predictions \
-    --output-dir ./analysis \
-    --outlier-method iqr \
-    --outlier-threshold 1.5
-```
-
-#### Analysis Arguments
-
-| Argument | Description | Default | Choices |
-|----------|-------------|---------|---------|
-| `--predictions-dir` | Directory with prediction files | - | - |
-| `--output-dir` | Output directory | `./analysis_results` | - |
-| `--outlier-method` | Outlier detection method | `iqr` | `iqr`, `zscore`, `none` |
-| `--outlier-threshold` | Outlier threshold | `1.5` | any float |
-
----
-
 ## 📊 Input Data Format
 
 ### Required Columns
@@ -215,22 +184,7 @@ MASGADSKGD...,COc1ccc2c(c1)ncc(n2)CN
 
 
 ---
-
-## 📁 Output Files
-
-### Prediction Files
-
-For each input file, two output files are generated:
-
-**predictions_{filename}.csv**
-```csv
-FASTA,smiles,predicted_pKoff
-MKTAYIAKQRQISFVK...,CC(C)Cc1ccc(cc1)C(C)C(=O)O,6.45
-```
-
-**predictions_{filename}.xlsx**
 - Same data in Excel format with formatting
-
 
 ## 💾 Model Weights
 
