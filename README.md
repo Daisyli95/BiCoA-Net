@@ -37,14 +37,11 @@ BiCoA-Net predicts protein-ligand binding kinetics with state-of-the-art perform
 - Drug discovery and development
 - Lead optimization
 - Compound screening and prioritization
-- Structure-activity relationship (SAR) studies
 
 ---
 
 ## ✨ Key Features
 
-- **High Accuracy:** State-of-the-art performance on binding kinetics prediction
-- **Interpretable:** Bidirectional co-attention provides insights into molecular interactions
 - **Easy to Use:** Simple command-line interface for predictions
 - **Comprehensive Analysis:** Built-in tools for drug discovery metrics
 - **Fast Inference:** GPU-accelerated predictions
