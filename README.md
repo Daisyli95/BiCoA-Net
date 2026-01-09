@@ -54,7 +54,7 @@ BiCoA-Net predicts protein-ligand binding kinetics with state-of-the-art perform
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/Daisyli95/BiCoA-Net.git
+git clone https://github.com/Daisyli95/KinetX.git
 cd BiCoA-Net
 ```
 
