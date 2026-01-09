@@ -186,7 +186,7 @@ MASGADSKGD...,COc1ccc2c(c1)ncc(n2)CN
 
 ## 💾 Model Weights
 
-Pre-trained models are available via Hugging Face:
+Pre-trained models are available via Hugging Face: https://huggingface.co/Daisyli95/BiCoA-Net/tree/main . Please download the model.pt file.
 
 
 
