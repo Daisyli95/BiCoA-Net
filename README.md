@@ -4,7 +4,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 
-Please note that you can run all the codes with just a simple click on Google Colab without installing all the dependencies.
+**Please note that you can run all the codes with just a simple click on Google Colab without installing all the dependencies.**
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NjBUuXaCKR-n3uif57gzUQ6kkt5lVSV_#scrollTo=TpPI-ZGef6QB)
 
 **BiCoA-Net: An Interpretable Bidirectional Co-Attention Framework for Predicting Protein-Ligand Binding Kinetics**
