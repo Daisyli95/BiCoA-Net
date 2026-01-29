@@ -1,4 +1,4 @@
-# BiCoA-Net
+# BiCoA-Net: An Interpretable Bidirectional Co-Attention Framework for Predicting Protein-Ligand Binding Kinetics
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -7,7 +7,6 @@
 **Please note that you can run all the codes with just a simple click on Google Colab without installing all the dependencies.**
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NjBUuXaCKR-n3uif57gzUQ6kkt5lVSV_#scrollTo=TpPI-ZGef6QB)
 
-**BiCoA-Net: An Interpretable Bidirectional Co-Attention Framework for Predicting Protein-Ligand Binding Kinetics**
 
 Official implementation of BiCoA-Net, a deep learning framework for predicting protein-ligand binding kinetics (pKoff) with enhanced interpretability through bidirectional co-attention mechanisms.
 
