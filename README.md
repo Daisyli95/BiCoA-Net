@@ -8,7 +8,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NjBUuXaCKR-n3uif57gzUQ6kkt5lVSV_#scrollTo=TpPI-ZGef6QB)
 
 
-Official implementation of BiCoA-Net, a deep learning framework for predicting protein-ligand binding kinetics (pKoff) with enhanced interpretability through bidirectional co-attention mechanisms.
+Official implementation of BiCoA-Net, a deep learning framework for predicting protein-ligand binding kinetics (pkoff) with enhanced interpretability through bidirectional co-attention mechanisms.
 
 > **Status:** Under Review
 
@@ -30,7 +30,7 @@ Official implementation of BiCoA-Net, a deep learning framework for predicting p
 
 ## 🔬 Overview
 
-BiCoA-Net predicts protein-ligand binding kinetics with state-of-the-art performance and interpretability. The model uses bidirectional co-attention mechanisms to capture interactions between protein sequences and ligand structures.
+BiCoA-Net predicts protein-ligand binding kinetics with bidirectional co-attention mechanisms to capture interactions between protein sequences and ligand structures.
 
 **Key Applications:**
 - Drug discovery and development
@@ -150,10 +150,14 @@ python inference.py \
 | `--device` | Computation device (`cuda` or `cpu`) | `cuda` | ❌ |
 | `--batch-size` | Batch size for inference | `32` | ❌ |
 
-### Training your own model
+### Training your own model:
+
+#### Random split scenario:
 ```bash
 python train_random.py --data-csv data_clean.csv
 ```
+
+#### Cold-start scenario:
 ```bash
 python train_cold.py --train-csv ./cold_start/train.csv --val-csv ./cold_start/val.csv --test-csv ./cold_start/test.csv
 ```
