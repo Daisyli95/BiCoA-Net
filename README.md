@@ -39,13 +39,20 @@ BiCoA-Net predicts protein-ligand binding kinetics with state-of-the-art perform
 
 ---
 
-## ✨ Key Features
-
-- **Easy to Use:** Simple command-line interface for predictions
-- **Comprehensive Analysis:** Built-in tools for drug discovery metrics
-- **Fast Inference:** GPU-accelerated predictions
-- **Multiple Formats:** Supports both CSV and Excel input/output
-
+## ✨ Files introduction
+###Data files
+- **KinetX.csv** The dataset contains 5,624 samples containing information of experimentally measured protein-ligand kinetics. 
+- **data_clean.csv** The dataset contains 5,446 subsamples of KinetX.csv that cannot be processed by MolFormer.
+- **casestudy.csv** The dataset contains four held_out targets with information of experimentally measured protein-ligand kinetics. 
+- **folder cold_start** The splitted data for cold start. 
+- **folder random_split** The splitted data for random_split.
+- **input.csv** Sample input for inference.
+  
+### Script files
+- **inference.py** The inference script.
+- **predict_casestudy.py** The script of model architecture and load the model weights.
+- **train_random.py** The training script for random split.
+- **train_cold.py** The training script for cold start.
 ---
 
 ## 🛠️ Installation
@@ -132,7 +139,6 @@ python inference.py \
     --device cuda \
     --batch-size 64
 ```
-
 #### Command-Line Arguments
 
 | Argument | Description | Default | Required |
@@ -142,6 +148,14 @@ python inference.py \
 | `--output-dir` | Directory for saving results | `./predictions` | ❌ |
 | `--device` | Computation device (`cuda` or `cpu`) | `cuda` | ❌ |
 | `--batch-size` | Batch size for inference | `32` | ❌ |
+
+#### Training your own model
+```bash
+python train_random.py --data-csv data_clean.csv
+```
+```bash
+python train_cold.py --train-csv ./cold_start/train.csv --val-csv ./cold_start/val.csv --test-csv ./cold_start/test.csv
+```
 
 #### Example: Processing Multiple Files
 ```bash
