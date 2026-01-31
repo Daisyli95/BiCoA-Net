@@ -149,20 +149,12 @@ python inference.py \
 | `--device` | Computation device (`cuda` or `cpu`) | `cuda` | ❌ |
 | `--batch-size` | Batch size for inference | `32` | ❌ |
 
-#### Training your own model
+### Training your own model
 ```bash
 python train_random.py --data-csv data_clean.csv
 ```
 ```bash
 python train_cold.py --train-csv ./cold_start/train.csv --val-csv ./cold_start/val.csv --test-csv ./cold_start/test.csv
-```
-
-#### Example: Processing Multiple Files
-```bash
-python inference.py \
-    --checkpoint model.pt \
-    --input dataset.csv \
-    --output-dir ./batch_predictions
 ```
 
 ---
