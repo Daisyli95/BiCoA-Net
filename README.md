@@ -47,6 +47,7 @@ BiCoA-Net predicts protein-ligand binding kinetics with bidirectional co-attenti
 - **folder cold_start** The splitted data for cold start. 
 - **folder random_split** The splitted data for random_split.
 - **input_single.csv, input_multiple.csv** Sample input for inference.
+- **enviroment.yml** Mirror the same environment of our server.
   
 ### Script files
 - **inference.py** The inference script.
