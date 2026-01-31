@@ -21,7 +21,7 @@ Official implementation of BiCoA-Net, a deep learning framework for predicting p
 - [Quick Start](#-quick-start)
 - [Usage](#-usage)
   - [Running Predictions](#running-predictions)
-  - [Training your own model](#training-models)
+  - [Training your own model](#training-your-own-model)
 - [Input Data Format](#-input-data-format)
 - [Model Weights](#-model-weights)
 - [License](#-license)
