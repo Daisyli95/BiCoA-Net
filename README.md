@@ -57,7 +57,6 @@ BiCoA-Net predicts protein-ligand binding kinetics with bidirectional co-attenti
 ---
 
 ## 🛠️ Installation
-
 ### Prerequisites
 - Python 3.8 or higher
 - CUDA 11.8+ (for GPU support, optional but recommended)
@@ -69,20 +68,35 @@ git clone https://github.com/Daisyli95/KinetX.git
 cd KinetX
 ```
 
-### Step 2: Install PyTorch
-For **CUDA 11.8** (recommended for GPU acceleration):
+### Step 2: Set Up Environment
+
+Choose **one** of the following methods:
+
+#### Option A: Using Conda (Recommended)
+Create the environment directly from the provided `environment.yml` file:
+```bash
+conda env create -f environment.yml
+conda activate kinetx
+```
+
+#### Option B: Using pip with Virtual Environment
+1. Create and activate a virtual environment:
+```bash
+conda create -n kinetx python=3.12
+conda activate kinetx
+```
+
+2. Install PyTorch with CUDA 11.8 (recommended for GPU acceleration):
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
-
 For **CPU-only** installation:
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
-
 > **Note:** For other CUDA versions, visit [PyTorch installation guide](https://pytorch.org/get-started/locally/)
 
-### Step 3: Install Dependencies
+3. Install the remaining dependencies:
 ```bash
 pip install -r requirements.txt
 ```
